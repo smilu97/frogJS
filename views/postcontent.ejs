@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> content - <%= title %> </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<h1> <%= title %> </h1>
+	<h3> <%= contents %> </h3>
+	<h4> user : <%= user_id %> </h4>
+	<h5> Register date : <%= register_date %> </h5>
+	<% if(owner == 1){ %>
+	<h6> <a href="/api/delete/post?board_no=<%= board_no %>"> delete </a> </h6>
+	<h6> <a href="/page/modify/post?board_no=<%= board_no %>"> modify </a> </h6>
+	<% } %>
+</body>
+
+<footer>
+</footer>
+
+</html>

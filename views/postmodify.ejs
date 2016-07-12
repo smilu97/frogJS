@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Post </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<form action="/api/modify/post" method="POST">
+		<input type="text" placeholder="title" name="title">
+		<input type="text" placeholder="content" name="contents">
+		<input type="hidden" value="<%=board_no%>" name="board_no">
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+<footer>
+</footer>
+
+</html>
