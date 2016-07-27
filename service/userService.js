@@ -1,21 +1,15 @@
-exp = module.exports
-
-exp.getItem = function(dbc, username, afterFunction) {
-	var query = dbc.query('select * from users where username='+username,
-		function(err, result) {
-			afterFunction(err, result)
-		})
-}
-
-exp.createItem = function(dbc, user, afterFunction) {
-	var queryString = "INSERT INTO users(username, password, enabled) VALUES ('" +
-		user.username + "', '" + user.password + "', '1')"
-	var query = dbc.query(queryString, function(err, result) { afterFunction(err, result) })
-}
-
-exp.getItemHasPassword = function(dbc, user, afterFunction) {
-	var queryString = "select * from users where username='"+user.username+"' and password='"+user.password+"'"
-	var query = dbc.query(queryString, function(err, result) { 
-		afterFunction(err, result) 
-	})
+module.exports = function() {
+	this.columns = ['no','real_name','show_name','email','password','sex','birth_date','created_date',
+	'last_date','image','status']
+	this.table_name = 'user'
+	base = new (require('./base'))()
+	this.getItem = function(dbc, wanted, item, afterFunction) {
+		base.getItem(dbc, wanted, item, afterFunction, this.columns, this.table_name)
+	}
+	this.createItem = function(dbc, item, afterFunction) {
+		base.createItem(dbc, item, afterFunction, this.columns, this.table_name)
+	}
+	this.modifyItem = function(dbc, modified, where, afterFunction) {
+		base.modifyItem(dbc, modified, where, afterFunction, this.columns, this.table_name)
+	}
 }

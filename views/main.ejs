@@ -1,0 +1,252 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta name="author" content="Crucarp_이선주">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="/css/style.css" charset="utf-8"/>
+<link rel="stylesheet" href="/css/jquery.bxslider.css" />
+<script src="/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/content.js"></script>
+<title>BOOKING</title>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="hd_wrap">
+
+				<h1 class="logo"><a href="main.html"><img src="/img/logo.png" alt="booking" /></a></h1>
+
+				<div class="selcet">
+
+					<div class="pull-left area_depth1">
+						<a href="#" class="bt_Sel"><%= area %></a>
+						<ul class="menu" style="margin: 11px 0 0 -60px;">
+							<li><a href="#">인천</a></li>
+							<li><a href="#" onclick="alert('서비스 준비중입니다.');return false;">서울</a>
+							<li><a href="#" onclick="alert('서비스 준비중입니다.');return false;">부산</a></li>
+						</ul>
+					</div>
+					
+					<div class="pull-left area_depth2">
+						<a href="#" class="sel_area bt_Sel">지역선택</a>
+						<ul class="menu">
+							<li><a href="#">서울</a>
+								<ul>
+									<li class="act"><a href="#">연안동</a>
+										<ul>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+										</ul>
+									</li>
+									<li><a href="#">연안동</a>
+										<ul>
+											<li><a href="#">로데오 거리1</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리2</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+										</ul>
+									</li>
+									<li><a href="#">연안동</a>
+										<ul>
+											<li><a href="#">로데오 거리2</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리3</a> <input type="checkbox" /></li>
+
+										</ul>
+									</li>
+									<li>연안동</li>
+									<li>연안동</li>
+								</ul>
+							</li>
+							<li><a href="#">인천</a>
+								<ul>
+									<li>연안동</li>
+									<li>연안동</li>
+									<li>연안동</li>
+									<li>연안동</li>
+									<li>연안동</li>
+								</ul>
+							</li>
+							<li><a href="#">부산</a></li>
+						</ul>
+					</div>
+
+					<div class="pull-left area_depth2">
+						<a href="#" class="sel_area bt_Sel">음식종류 선택</a>
+						<ul class="menu" style="display:none">
+							<li class="ofh"><a href="#" class="pull-left">한식</a> <input type="checkbox"  class="pull-right" /></li>
+							<li class="ofh"><a href="#" class="pull-left">중식</a> <input type="checkbox" class="pull-right" /></li>
+							<li class="ofh"><a href="#" class="pull-left">일식</a> <input type="checkbox" class="pull-right" /></li>
+							<li class="ofh"><a href="#" class="pull-left">양식</a> <input type="checkbox" class="pull-right" /></li>
+						</ul>
+					</div>
+
+					<div class="pull-left area_search">
+						<form class="frm_selBox">
+							<fieldset>
+								<legend class="blind">직접검색</legend>
+								<input type="text" class="txtSearch" placeholder="직접검색" title="직접검색" />
+								<input type="submit" class="btnDsearch" value="검색">
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="top_right clearfix">
+					<div class="pull-left">
+						<a href="#" class="cMsg"><img src="/img/img-pop.jpg" alt="알람" /></a>
+						<div class="alertMsg">
+							<img src="img/icon-alert.png" alt="" class="iconAlert" />
+							<ul>
+								<li><a href="#">알림입니다.</a></li>
+								<li><a href="#">알림입니다.</a></li>
+								<li><a href="#">알림입니다.</a></li>
+							</ul>
+						</div>
+						<a href="#" class="" style="position:relative;left:-6px"><img src="/img/img-mine.jpg" alt="내이미지" /></a>
+					</div>
+					<div class="pull-right">
+						<img src="/img/search/ic_user.png" alt="" style="position: relative;  margin-right: 5px;  vertical-align: middle;"/><span class="loca">인천시 연수구 송도동</span>
+						<ul class="lnb" style="margin-top:3px">
+							<% if(show_name == '') { %>
+							<li><a href="/page/signin">로그인</a></li>
+							<li><a href="/page/signup">회원가입</a></li>
+							<% } else { %>
+							<li><a href="/api/logout">로그아웃</a></li>
+							<% } %>
+						</ul>
+					</div>
+				</div>						
+			</div>
+		</div><!-- //#header -->
+		<div class="promoWrap">
+			<ul class="promo">
+				<li>
+					<a href="#">
+						<img src="/img/promo1.jpg" alt="" />
+						<span class="per">30%</span>
+						<span class="time">20:18:06</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="/img/promo1.jpg" alt="" />
+						<span class="per">30%</span>
+						<span class="time">20:18:06</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="/img/promo1.jpg" alt="" />
+						<span class="per">30%</span>
+						<span class="time">20:18:06</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="container">
+			<div class="content">
+				<div class="storeListWrap">			
+					<ul class="storeList">
+						<li>
+							<a href="#">
+								<img src="/img/hot1.png" alt="" />
+								<span class="tit">인천 부평점</br>프라임 마리스</span>
+								<span class="date">5.24</span>
+								<span class="cnt">1,020</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="/img/hot2.png" alt="" />
+								<span class="tit">인천 부평점</br>프라임 마리스</span>
+								<span class="date">5.24</span>
+								<span class="cnt">860</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="/img/hot3.png" alt="" />
+								<span class="tit">인천 부평점</br>프라임 마리스</span>
+								<span class="date">5.24</span>
+								<span class="cnt">500</span>
+							</a>
+						</li>
+					</ul>			
+					<ul class="storeList">
+						<li>
+							<a href="#">
+								<img src="/img/hot1.png" alt="" />
+								<span class="tit">인천 부평점</br>프라임 마리스</span>
+								<span class="date">5.24</span>
+								<span class="cnt">1,020</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="/img/hot2.png" alt="" />
+								<span class="tit">인천 부평점</br>프라임 마리스</span>
+								<span class="date">5.24</span>
+								<span class="cnt">860</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="/img/hot3.png" alt="" />
+								<span class="tit">인천 부평점</br>프라임 마리스</span>
+								<span class="date">5.24</span>
+								<span class="cnt">500</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="gridList">
+					<li class="grid1">
+						<a href="#">
+							<img src="/img/grid1.jpg" alt="" />
+							<span class="wrap">
+								<span class="tit">인천 구월동</br>스시웨이</span>
+								<span class="date">5/23</span>
+								<span class="per">-20%</span>
+							</span>
+						</a>
+					</li>
+					<li class="grid2">
+						<a href="#">
+							<img src="/img/grid2.jpg" alt="" />
+							<span class="wrap">
+								<span class="tit">인천 구월동</br>스시오</span>
+								<span class="date">5/24</span>
+								<span class="per">-20%</span>
+							</span>
+						</a>
+					</li>
+					<li class="grid3">
+						<a href="#">
+							<img src="/img/grid3.jpg" alt="" />
+							<span class="wrap">
+								<span class="tit">인천 중구</br>닌자 스시</span>
+								<span class="date">5/25</span>
+								<span class="per">-20%</span>
+							</span>
+						</a>
+					</li>
+					<li class="grid4">
+						<a href="#">
+							<img src="/img/grid4.jpg" alt="" />
+							<span class="wrap">
+								<span class="tit">인천 중구</br>스시남</span>
+								<span class="date">5/23</span>
+								<span class="per">-20%</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- //#container -->
+		<div id="footer"><img src="/img/img-footer.jpg" alt="" /></div><!-- //#footer -->
+	</div><!-- //#wrap -->
+</body>
+</html>

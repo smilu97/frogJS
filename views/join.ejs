@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta name="author" content="Crucarp_이선주">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="/css/style.css" charset="utf-8"/>
+<script src="/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/js/content.js"></script>
+<title>회원가입</title>
+</head>
+<body>
+	<div id="wrap">
+		<div id="container" class="login">
+			<div class="toMain"><a href="/">메인으로 가기</a></div>
+			<div class="content">
+				<form action="/api/signup?_csrf=<%= csrftoken %>" class="frmJoin" method="POST" enctype="multipart/form-data">
+					<fieldset>
+						<legend class="blind">이메일로 회원가입</legend>
+						<div class="inputBox">
+							<label for="email">이메일</label>
+							<input type="email" id="email" name="email" />
+						</div>
+						<div class="inputBox">
+							<label for="real_name">이름</label>
+							<input type="text" id="real_name" name="real_name" />
+						</div>
+						<div class="inputBox">
+							<label for="show_name">닉네임</label>
+							<input type="text" id="show_name" name="show_name" />
+						</div>
+						<div class="inputBox">
+							<label for="password">비밀번호</label>
+							<input type="password" id="password" name="password"/>
+						</div>
+						<div class="inputBox">
+							<label for="birth_date">생일</label>
+							<input type="date" id="birth_date" name="birth_date"/>
+						</div>
+						<div class="inputBox">
+							<label for="image">프로필 이미지</label>
+							<input type="file" id="image" name="image"/>
+						</div>
+						<div class="inputBox">
+							<label for="sex">성별</label>
+							<input type="radio" id="sex" name="sex" value='1'/> 남자
+							<input type="radio" id="sex" name="sex" value='0'/> 여자
+						</div>
+						<button type="submit" class="btnLogin">가입</button>
+					</fieldset>
+					<span class="txtJoin">비밀번호가 기억나지 않으세요? <a href="#">재설정하기</a></span>
+				</form>
+			</div>
+		</div><!-- //#container -->
+	</div><!-- //#wrap -->
+</body>
+</html>

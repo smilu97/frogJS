@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Postlist </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<% include header.ejs %>
+</head>
+
+<body>
+	<% for (index in posts) { %>
+		<h5> <a href="/page/postcontent?board_no=<%=posts[index].board_no%>"> <%=posts[index].title%> </a> </h5>
+	<%}%>
+	<h5> <a href="/page/create/post"> post </a> </h5>
+</body>
+
+<footer>
+	<h4> <%= msg %> </h4>
+</footer>
+
+</html>

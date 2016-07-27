@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Post </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<% include header.ejs %>
+</head>
+
+<body>
+	<form action="/api/create/post" method="POST">
+		<input type="text" placeholder="title" name="title"
+		style="width:500px;"><br><br>
+		<input type="text" placeholder="content" name="contents" 
+		style="width:500px; height:500px;"><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+<footer>
+</footer>
+
+</html>

@@ -1,0 +1,390 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta name="author" content="Crucarp_이선주">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="css/style.css" charset="utf-8"/>
+<link rel="stylesheet" href="css/jquery.bxslider.css" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/content.js"></script>
+<title>BOOKING</title>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="hd_wrap">
+
+				<h1 class="logo"><a href="main.html"><img src="img/logo.png" alt="booking" /></a></h1>
+
+				<div class="selcet">
+
+					<div class="pull-left area_depth1">
+						<a href="#" class="bt_Sel">인천</a>
+						<ul class="menu" style="margin: 11px 0 0 -60px;">
+							<li><a href="#" onclick="alert('서비스 준비중입니다.');return false;">서울</a>
+							<li><a href="#">인천</a></li>
+							<li><a href="#" onclick="alert('서비스 준비중입니다.');return false;">부산</a></li>
+						</ul>
+					</div>
+					
+					<div class="pull-left area_depth2">
+						<a href="#" class="sel_area bt_Sel">지역선택</a>
+						<ul class="menu">
+							<li><a href="#">서울</a>
+								<ul>
+									<li class="act"><a href="#">연안동</a>
+										<ul>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+										</ul>
+									</li>
+									<li><a href="#">연안동</a>
+										<ul>
+											<li><a href="#">로데오 거리1</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리2</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리</a> <input type="checkbox" /></li>
+										</ul>
+									</li>
+									<li><a href="#">연안동</a>
+										<ul>
+											<li><a href="#">로데오 거리2</a> <input type="checkbox" /></li>
+											<li><a href="#">로데오 거리3</a> <input type="checkbox" /></li>
+
+										</ul>
+									</li>
+									<li>연안동</li>
+									<li>연안동</li>
+								</ul>
+							</li>
+							<li><a href="#">인천</a>
+								<ul>
+									<li>연안동</li>
+									<li>연안동</li>
+									<li>연안동</li>
+									<li>연안동</li>
+									<li>연안동</li>
+								</ul>
+							</li>
+							<li><a href="#">부산</a></li>
+						</ul>
+					</div>
+
+					<div class="pull-left area_depth2">
+						<a href="#" class="sel_area bt_Sel">음식종류 선택</a>
+						<ul class="menu" style="display:none">
+							<li class="ofh"><a href="#" class="pull-left">한식</a> <input type="checkbox"  class="pull-right" /></li>
+							<li class="ofh"><a href="#" class="pull-left">중식</a> <input type="checkbox" class="pull-right" /></li>
+							<li class="ofh"><a href="#" class="pull-left">일식</a> <input type="checkbox" class="pull-right" /></li>
+							<li class="ofh"><a href="#" class="pull-left">양식</a> <input type="checkbox" class="pull-right" /></li>
+						</ul>
+					</div>
+
+					<div class="pull-left area_search">
+						<form class="frm_selBox">
+							<fieldset>
+								<legend class="blind">직접검색</legend>
+								<input type="text" class="txtSearch" placeholder="직접검색" title="직접검색" />
+								<input type="submit" class="btnDsearch" value="검색">
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="top_right clearfix">
+					<div class="pull-left">
+						<a href="#" class=""><img src="img/img-pop.jpg" alt="알람" /></a>
+						<a href="#" class="" style="position:relative;left:-6px"><img src="img/img-mine.jpg" alt="내이미지" /></a>
+					</div>
+					<div class="pull-right">
+						<img src="img/search/ic_user.png" alt="" style="position: relative;  margin-right: 5px;  vertical-align: middle;"/><span class="loca">인천시 연수구 송도동</span>
+						<ul class="lnb" style="margin-top:3px">
+							<li><a href="#">로그아웃</a></li>
+							<li><a href="#">회원가입</a></li>
+						</ul>
+					</div>
+				</div>						
+			</div>
+		</div><!-- //#header -->
+		<div class="map">
+			지도영역
+		</div>
+		<div id="container">
+			<div class="content">
+				
+				<div class="text-center">
+					<h2 class="search_tt">
+						<span class="mainColor">연수구</span>의 <span class="mainColor">일식</span>집 <br />
+						맛집 총 <span class="mainColor">9</span>개가 검색되었습니다.
+					</h2>
+				</div>
+				<div class="lists_wrap">
+					<ul class="ul_lists clearfix">
+						<li>
+							<div class="img">
+								<img src="img/search/temp01.jpg" alt="" />
+								<div class="img_con">
+									<div class="pull-left">
+										<p>
+											예약 : <span>287</span><br />
+											리뷰 : <span>12</span><br />
+											조회수 : <span>22905</span>
+										</p>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="like act">like</a>
+									</div>
+									<div class="bt_con">
+										<h4>고메스시</h4>
+										<p><span>연수구4동</span>, <span>일식</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="main_con">
+								<div class="rating ofh">
+									<div class="pull-left"><img src="img/search/rating_0.png" alt="" /><img src="img/search/rating_0_5.png" alt="" /><img src="img/search/rating_1.png" alt="" /></div>
+									<div class="pull-right">
+										<span class="point">3.8점</span>
+									</div>
+									
+								</div>
+								<h4>예산 : 4만원 미만(2인 기준)</h4>
+								<p>연수구4동에 위치한 대표 일식집. <br />신선한 스시를 먹을수 있는곳 </p>
+								<a href="#" class="more_img">사진 8장</a>
+							</div>
+							<div class="btn_area ofh">
+								<div class="pull-left">
+									<a href="#"><img src="img/search/btn_booking.png" alt="" /></a>
+								</div>
+								<div class="pull-right">
+									<a href="#"><img src="img/search/btn_review.png" alt="" /></a>
+								</div>
+							</div>
+						</li>
+						
+
+						<li>
+							<div class="img">
+								<img src="img/search/temp01.jpg" alt="" />
+								<div class="img_con">
+									<div class="pull-left">
+										<p>
+											예약 : <span>287</span><br />
+											리뷰 : <span>12</span><br />
+											조회수 : <span>22905</span>
+										</p>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="like act">like</a>
+									</div>
+									<div class="bt_con">
+										<h4>고메스시</h4>
+										<p><span>연수구4동</span>, <span>일식</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="main_con">
+								<div class="rating ofh">
+									<div class="pull-left"><img src="img/search/rating_0.png" alt="" /><img src="img/search/rating_0_5.png" alt="" /><img src="img/search/rating_1.png" alt="" /></div>
+									<div class="pull-right">
+										<span class="point">3.8점</span>
+									</div>
+									
+								</div>
+								<h4>예산 : 4만원 미만(2인 기준)</h4>
+								<p>연수구4동에 위치한 대표 일식집. <br />신선한 스시를 먹을수 있는곳 </p>
+								<a href="#" class="more_img">사진 8장</a>
+							</div>
+							<div class="btn_area ofh">
+								<div class="pull-left">
+									<a href="#"><img src="img/search/btn_booking.png" alt="" /></a>
+								</div>
+								<div class="pull-right">
+									<a href="#"><img src="img/search/btn_review.png" alt="" /></a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="img">
+								<img src="img/search/temp01.jpg" alt="" />
+								<div class="img_con">
+									<div class="pull-left">
+										<p>
+											예약 : <span>287</span><br />
+											리뷰 : <span>12</span><br />
+											조회수 : <span>22905</span>
+										</p>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="like act">like</a>
+									</div>
+									<div class="bt_con">
+										<h4>고메스시</h4>
+										<p><span>연수구4동</span>, <span>일식</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="main_con">
+								<div class="rating ofh">
+									<div class="pull-left"><img src="img/search/rating_0.png" alt="" /><img src="img/search/rating_0_5.png" alt="" /><img src="img/search/rating_1.png" alt="" /></div>
+									<div class="pull-right">
+										<span class="point">3.8점</span>
+									</div>
+									
+								</div>
+								<h4>예산 : 4만원 미만(2인 기준)</h4>
+								<p>연수구4동에 위치한 대표 일식집. <br />신선한 스시를 먹을수 있는곳 </p>
+								<a href="#" class="more_img">사진 8장</a>
+							</div>
+							<div class="btn_area ofh">
+								<div class="pull-left">
+									<a href="#"><img src="img/search/btn_booking.png" alt="" /></a>
+								</div>
+								<div class="pull-right">
+									<a href="#"><img src="img/search/btn_review.png" alt="" /></a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="img">
+								<img src="img/search/temp01.jpg" alt="" />
+								<div class="img_con">
+									<div class="pull-left">
+										<p>
+											예약 : <span>287</span><br />
+											리뷰 : <span>12</span><br />
+											조회수 : <span>22905</span>
+										</p>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="like act">like</a>
+									</div>
+									<div class="bt_con">
+										<h4>고메스시</h4>
+										<p><span>연수구4동</span>, <span>일식</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="main_con">
+								<div class="rating ofh">
+									<div class="pull-left"><img src="img/search/rating_0.png" alt="" /><img src="img/search/rating_0_5.png" alt="" /><img src="img/search/rating_1.png" alt="" /></div>
+									<div class="pull-right">
+										<span class="point">3.8점</span>
+									</div>
+									
+								</div>
+								<h4>예산 : 4만원 미만(2인 기준)</h4>
+								<p>연수구4동에 위치한 대표 일식집. <br />신선한 스시를 먹을수 있는곳 </p>
+								<a href="#" class="more_img">사진 8장</a>
+							</div>
+							<div class="btn_area ofh">
+								<div class="pull-left">
+									<a href="#"><img src="img/search/btn_booking.png" alt="" /></a>
+								</div>
+								<div class="pull-right">
+									<a href="#"><img src="img/search/btn_review.png" alt="" /></a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="img">
+								<img src="img/search/temp01.jpg" alt="" />
+								<div class="img_con">
+									<div class="pull-left">
+										<p>
+											예약 : <span>287</span><br />
+											리뷰 : <span>12</span><br />
+											조회수 : <span>22905</span>
+										</p>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="like act">like</a>
+									</div>
+									<div class="bt_con">
+										<h4>고메스시</h4>
+										<p><span>연수구4동</span>, <span>일식</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="main_con">
+								<div class="rating ofh">
+									<div class="pull-left"><img src="img/search/rating_0.png" alt="" /><img src="img/search/rating_0_5.png" alt="" /><img src="img/search/rating_1.png" alt="" /></div>
+									<div class="pull-right">
+										<span class="point">3.8점</span>
+									</div>
+									
+								</div>
+								<h4>예산 : 4만원 미만(2인 기준)</h4>
+								<p>연수구4동에 위치한 대표 일식집. <br />신선한 스시를 먹을수 있는곳 </p>
+								<a href="#" class="more_img">사진 8장</a>
+							</div>
+							<div class="btn_area ofh">
+								<div class="pull-left">
+									<a href="#"><img src="img/search/btn_booking.png" alt="" /></a>
+								</div>
+								<div class="pull-right">
+									<a href="#"><img src="img/search/btn_review.png" alt="" /></a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="img">
+								<img src="img/search/temp01.jpg" alt="" />
+								<div class="img_con">
+									<div class="pull-left">
+										<p>
+											예약 : <span>287</span><br />
+											리뷰 : <span>12</span><br />
+											조회수 : <span>22905</span>
+										</p>
+									</div>
+									<div class="pull-right">
+										<a href="#" class="like act">like</a>
+									</div>
+									<div class="bt_con">
+										<h4>고메스시</h4>
+										<p><span>연수구4동</span>, <span>일식</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="main_con">
+								<div class="rating ofh">
+									<div class="pull-left"><img src="img/search/rating_0.png" alt="" /><img src="img/search/rating_0_5.png" alt="" /><img src="img/search/rating_1.png" alt="" /></div>
+									<div class="pull-right">
+										<span class="point">3.8점</span>
+									</div>
+									
+								</div>
+								<h4>예산 : 4만원 미만(2인 기준)</h4>
+								<p>연수구4동에 위치한 대표 일식집. <br />신선한 스시를 먹을수 있는곳 </p>
+								<a href="#" class="more_img">사진 8장</a>
+							</div>
+							<div class="btn_area ofh">
+								<div class="pull-left">
+									<a href="#"><img src="img/search/btn_booking.png" alt="" /></a>
+								</div>
+								<div class="pull-right">
+									<a href="#"><img src="img/search/btn_review.png" alt="" /></a>
+								</div>
+							</div>
+						</li>
+
+
+					</ul>
+				</div>
+
+
+
+			</div>
+		</div><!-- //#container -->
+		<div id="footer"><img src="img/img-footer.jpg" alt="" /></div><!-- //#footer -->
+	</div><!-- //#wrap -->
+</body>
+</html>
