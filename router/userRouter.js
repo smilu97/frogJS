@@ -3,7 +3,7 @@ InSessionUserInfo = {no:1, email:1, show_name:1, real_name:1, birth_date:1}
 // '/page/user' 에서 보여줄 것들
 UserInfoPageShow = {sex:1, created_date:1, last_date:1, image:1}
 
-module.exports = function(app, fs, dbc) {
+module.exports = function(app, fs, dbc, imp) {
 	var userService = new (require('../service/userService'))()
 	var fileService = new (require('../service/fileService'))()
 
@@ -33,8 +33,6 @@ module.exports = function(app, fs, dbc) {
 								fileService.latestNo(dbc, function(err, result) {
 									user.image = result[0].maxno
 									user.status = 3;
-									console.log('aa')
-									console.log(user)
 									userService.createItem(dbc, user, function(err, result) {
 										userService.getItem(dbc, {no:1}, {email:user.email, password:user.password}, function(err, result) {
 											if(result.length == 1) {

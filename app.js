@@ -7,6 +7,11 @@ var helmet = require('helmet')
 var fs = require('fs')
 var mysql = require('mysql')
 var busboy = require('connect-busboy')
+var imp_t = require('iamport')
+var imp = new imp_t({
+	apiKey: '8976865191688778',
+	secret: '28eBrhPukTTdAI6Lv5FObVEIVsX8An7CwleXC4sWXmax4hjAmYpyT3hPvfY6C5I9qX631z0ZVax0rQAO'
+})
 
 var app = express()
 
@@ -62,6 +67,6 @@ app.use(function (err, req, res, next) {
 })
 
 
-var mainRouter = require('./router/mainRouter')(app, fs, dbc)
-var userRouter = require('./router/userRouter')(app, fs, dbc)
-var dinerRouter = require('./router/dinerRouter')(app, fs, dbc)
+var mainRouter = require('./router/mainRouter')(app, fs, dbc, imp)
+var userRouter = require('./router/userRouter')(app, fs, dbc, imp)
+var dinerRouter = require('./router/dinerRouter')(app, fs, dbc, imp)

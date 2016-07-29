@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<script src="/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.1.js"></script>
+<title>Buying test</title>
+</head>
+<body>
+	<form method="POST" action="/api/create/diner">
+		<input type="text" name="diner_name" placeholder="diner_name"/>
+		<input type="text" name="diner_call" placeholder="diner_call"/>
+		<input type="text" name="intro" placeholder="intro"/>
+		<input type="text" name="rest_day" placeholder="rest_day"/>
+		<input type="text" name="posting_date" placeholder="posting_date"/>
+		<input type="text" name="road_address" placeholder="road_address"/>
+		<input type="text" name="post_address" placeholder="post_address"/>
+		<input type="text" class="input_lat" name="latitude" placeholder="latitude"/>
+		<input type="text" class="input_lng" name="longitude" placeholder="longitude"/>
+		<input type="submit"/>
+	</form>
+	<script>
+	navigator.geolocation.getCurrentPosition(function(position) {
+		var lat = position.coords.latitude;
+		var lng = position.coords.longitude;
+		$(".input_lat")[0].value = lat;
+		$(".input_lng")[0].value = lng;
+	})
+	</script>
+</body>
+</html>

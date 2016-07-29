@@ -32,6 +32,7 @@ INSERT INTO `frog`.`user` (`no`, `real_name`, `show_name`, `email`, `password`, 
 
 create table `diner`(
 	no int not null auto_increment comment '식당 번호',
+	owner int not null,
 	diner_name varchar(200) not null comment '식당 이름',
 	diner_call varchar(200) not null comment '식당 전화번호',
 	intro text not null comment'식당 소개',
@@ -42,6 +43,7 @@ create table `diner`(
 	latitude float not null,
 	longitude float not null,
 	photos varchar(255) not null comment '사진들',
+	foreign key (owner) references user(no),
 	PRIMARY KEY(no)
 );
 

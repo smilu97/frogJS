@@ -1,4 +1,4 @@
-module.exports = function(app, fs, dbc) {
+module.exports = function(app, fs, dbc, imp) {
 	area_array = ['인천', '서울', '부산']
 	var fileService = new (require('../service/fileService'))()
 	app.get('/', function(req, res) {
