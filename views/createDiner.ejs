@@ -12,19 +12,34 @@
 		<input type="text" name="intro" placeholder="intro"/>
 		<input type="text" name="rest_day" placeholder="rest_day"/>
 		<input type="text" name="posting_date" placeholder="posting_date"/>
-		<input type="text" name="road_address" placeholder="road_address"/>
+		<input type="text" class="input_road_address" name="road_address" placeholder="road_address"/>
 		<input type="text" name="post_address" placeholder="post_address"/>
 		<input type="text" class="input_lat" name="latitude" placeholder="latitude"/>
 		<input type="text" class="input_lng" name="longitude" placeholder="longitude"/>
 		<input type="submit"/>
 	</form>
+	<h3 class="positionChecker"></h3>
 	<script>
-	navigator.geolocation.getCurrentPosition(function(position) {
-		var lat = position.coords.latitude;
-		var lng = position.coords.longitude;
-		$(".input_lat")[0].value = lat;
-		$(".input_lng")[0].value = lng;
-	})
+	var updatePosition = function() {
+		console.log('update position!')
+		var RA = $('.input_road_address')[0].value
+		if(RA != '')
+		{
+			$.get('https://maps.googleapis.com/maps/api/geocode/json?address='+RA+'&key=AIzaSyAKDKtnsQg0PO1jiV8jaRCMWKMvO9OFcEY', function(data) {
+				var num = data.results.length
+				console.log('length : ' + num)
+				if(num>0) {
+					console.log(data.results[0].formatted_address)
+					var loc = data.results[0].geometry.location;
+					var lat = loc.lat
+					var lng = loc.lng;
+					$(".input_lat")[0].value = lat;
+					$(".input_lng")[0].value = lng;
+				}				
+			})
+		}
+	}
+	setInterval(updatePosition , 1000)
 	</script>
 </body>
 </html>
